@@ -1,3 +1,4 @@
+@Library("test-shared-library") _
 pipeline {
   agent {
     docker {
@@ -11,7 +12,7 @@ environment {
   stages {
     stage('Checkout') {
       steps {
-        call()
+        helloWorld()
         sh 'echo passed'
         //git branch: 'main', url: 'https://github.com/Anoopdevops/learning-jenkins-zero-to-hero.git'
       }
