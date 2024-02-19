@@ -6,7 +6,7 @@ pipeline {
     }
   }
 environment {
-        IMAGE_TAG = "${BUILD_NUMBER}" // Or whatever mechanism you use to determine the image tag
+        IMAGE_TAG = "${DOCKER_IMAGE}" // Or whatever mechanism you use to determine the image tag
     }
   stages {
     stage('Checkout') {
